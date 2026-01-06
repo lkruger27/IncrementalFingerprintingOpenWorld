@@ -1,0 +1,95 @@
+existing_BLE_Models/cc2652r1
+Hypothesis 1: 1 states.
+digraph learnedModel {
+s0 [label="s0"];
+s0 -> s0 [label="length_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_RSP"];
+s0 -> s0 [label="length_rsp/BTLE|BTLE_DATA"];
+s0 -> s0 [label="feature_rsp/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_REQ"];
+s0 -> s0 [label="feature_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_FEATURE_RSP"];
+s0 -> s0 [label="version_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_VERSION_IND"];
+s0 -> s0 [label="mtu_req/ATT_Exchange_MTU_Response|ATT_Hdr|BTLE|BTLE_DATA|L2CAP_Hdr"];
+s0 -> s0 [label="pairing_req/BTLE|BTLE_DATA|L2CAP_Hdr|SM_Hdr|SM_Pairing_Response"];
+__start0 [shape=none, label=""];
+__start0 -> s0 [label=""];
+}
+
+Counterexample: ('pairing_req', 'length_rsp', 'length_rsp', 'mtu_req', 'mtu_req', 'mtu_req', 'feature_rsp', 'version_req', 'version_req', 'feature_req', 'version_req', 'version_req', 'length_req', 'feature_rsp')
+Hypothesis 2: 2 states.
+digraph learnedModel {
+s0 [label="s0"];
+s1 [label="s1"];
+s0 -> s0 [label="length_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_RSP"];
+s0 -> s0 [label="length_rsp/BTLE|BTLE_DATA"];
+s0 -> s1 [label="feature_rsp/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_REQ"];
+s0 -> s0 [label="feature_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_FEATURE_RSP"];
+s0 -> s0 [label="version_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_VERSION_IND"];
+s0 -> s0 [label="mtu_req/ATT_Exchange_MTU_Response|ATT_Hdr|BTLE|BTLE_DATA|L2CAP_Hdr"];
+s0 -> s0 [label="pairing_req/BTLE|BTLE_DATA|L2CAP_Hdr|SM_Hdr|SM_Pairing_Response"];
+s1 -> s1 [label="length_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_RSP"];
+s1 -> s0 [label="length_rsp/BTLE|BTLE_DATA"];
+s1 -> s1 [label="feature_rsp/BTLE|BTLE_DATA"];
+s1 -> s1 [label="feature_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_FEATURE_RSP"];
+s1 -> s1 [label="version_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_VERSION_IND"];
+s1 -> s1 [label="mtu_req/ATT_Exchange_MTU_Response|ATT_Hdr|BTLE|BTLE_DATA|L2CAP_Hdr"];
+s1 -> s1 [label="pairing_req/BTLE|BTLE_DATA|L2CAP_Hdr|SM_Hdr|SM_Pairing_Response"];
+__start0 [shape=none, label=""];
+__start0 -> s0 [label=""];
+}
+
+Counterexample: ('feature_rsp', 'feature_rsp', 'length_req', 'feature_rsp', 'length_rsp', 'feature_req', 'length_rsp', 'pairing_req', 'mtu_req', 'version_req', 'feature_rsp', 'length_req', 'feature_req', 'version_req', 'version_req', 'pairing_req')
+Hypothesis 3: 4 states.
+digraph learnedModel {
+s0 [label="s0"];
+s1 [label="s1"];
+s2 [label="s2"];
+s3 [label="s3"];
+s0 -> s0 [label="length_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_RSP"];
+s0 -> s0 [label="length_rsp/BTLE|BTLE_DATA"];
+s0 -> s1 [label="feature_rsp/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_REQ"];
+s0 -> s0 [label="feature_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_FEATURE_RSP"];
+s0 -> s0 [label="version_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_VERSION_IND"];
+s0 -> s0 [label="mtu_req/ATT_Exchange_MTU_Response|ATT_Hdr|BTLE|BTLE_DATA|L2CAP_Hdr"];
+s0 -> s2 [label="pairing_req/BTLE|BTLE_DATA|L2CAP_Hdr|SM_Hdr|SM_Pairing_Response"];
+s1 -> s1 [label="length_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_RSP"];
+s1 -> s0 [label="length_rsp/BTLE|BTLE_DATA"];
+s1 -> s1 [label="feature_rsp/BTLE|BTLE_DATA"];
+s1 -> s1 [label="feature_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_FEATURE_RSP"];
+s1 -> s1 [label="version_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_VERSION_IND"];
+s1 -> s1 [label="mtu_req/ATT_Exchange_MTU_Response|ATT_Hdr|BTLE|BTLE_DATA|L2CAP_Hdr"];
+s1 -> s3 [label="pairing_req/BTLE|BTLE_DATA|L2CAP_Hdr|SM_Hdr|SM_Pairing_Response"];
+s2 -> s2 [label="length_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_RSP"];
+s2 -> s2 [label="length_rsp/BTLE|BTLE_DATA"];
+s2 -> s3 [label="feature_rsp/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_REQ"];
+s2 -> s2 [label="feature_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_FEATURE_RSP"];
+s2 -> s2 [label="version_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_VERSION_IND"];
+s2 -> s2 [label="mtu_req/ATT_Exchange_MTU_Response|ATT_Hdr|BTLE|BTLE_DATA|L2CAP_Hdr"];
+s2 -> s0 [label="pairing_req/BTLE|BTLE_DATA|L2CAP_Hdr|SM_Failed|SM_Hdr"];
+s3 -> s3 [label="length_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_LENGTH_RSP"];
+s3 -> s2 [label="length_rsp/BTLE|BTLE_DATA"];
+s3 -> s3 [label="feature_rsp/BTLE|BTLE_DATA"];
+s3 -> s3 [label="feature_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_FEATURE_RSP"];
+s3 -> s3 [label="version_req/BTLE|BTLE_CTRL|BTLE_DATA|LL_VERSION_IND"];
+s3 -> s3 [label="mtu_req/ATT_Exchange_MTU_Response|ATT_Hdr|BTLE|BTLE_DATA|L2CAP_Hdr"];
+s3 -> s1 [label="pairing_req/BTLE|BTLE_DATA|L2CAP_Hdr|SM_Failed|SM_Hdr"];
+__start0 [shape=none, label=""];
+__start0 -> s0 [label=""];
+}
+
+Counterexample: None
+-----------------------------------
+Learning Finished.
+Learning Rounds:  3
+Number of states: 4
+Time (in seconds)
+  Total                : 0.01
+  Learning algorithm   : 0.01
+  Conformance checking : 0.0
+Learning Algorithm
+ # Membership Queries  : 66
+ # MQ Saved by Caching : 2
+ # Steps               : 394
+Equivalence Query
+ # Membership Queries  : 102
+ # Steps               : 1367
+-----------------------------------
+Model saved to /Users/adaptive_learning/AdaptiveFingerprinting/BLELearning/existing_BLE_Models/cc2652r1/learned_model.dot.

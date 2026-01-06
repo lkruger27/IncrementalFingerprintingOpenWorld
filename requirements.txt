@@ -1,0 +1,9 @@
+aalpy==1.5.1
+pandas
+scapy>=2.4.5
+colorama
+pyserial
+pycryptodome
+matplotlib
+jinja2
+numpy

@@ -1,0 +1,29 @@
+{
+"type": "java",
+    "mainClass": "ServerMqtt",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ServerMqtt",
+            "request": "launch",
+            "mainClass": "at.tugraz.itsec.assignment2.ServerMqtt",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "ServerMqtt",
+            "request": "launch",
+            "mainClass": "at.tugraz.itsec.assignment2.ServerMqtt",
+            "projectName": "assignment2"
+        },
+        {
+            "type": "java",
+            "name": "Launch with Arguments Prompt",
+            "request": "launch",
+            "mainClass": "",
+            "args": [
+                1884
+            ]
+        }
+    ]
+}
