@@ -96,7 +96,7 @@ python3 ./fingerprinting/FingerprintingInterface.py 'benchmark' 'algorithm'
 This will run the specified algorithm on a directory containing `.dot` models and provides a summary after executions. For example:
 
 ```
-> python3 ./fingerprinting/FingerprintingInterface.py "./TLS/mbedtls/" "IF"
+> python3 ./fingerprinting/FingerprintingInterface.py "./TLS/mbedtls/" "IF" -print_mapping True
 -----------------------------------
 Learning Finished of ./TLS/mbedtls/ using IF with:
   - Fingerprint Algorithm: ADG,
@@ -119,6 +119,51 @@ Learning
  # Queries  : 4585
  # Steps    : 25235
 -----------------------------------
+Specifications ./TLS/mbedtls/1.2.7/TLS12/learnedModel.dot:
+ - ./TLS/mbedtls/1.2.9/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.6/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.2.2/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.2.8/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.2.6/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.11/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.3/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.7/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.3.8/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.3.8/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.2/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.10/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.1/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.10/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.4/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.8/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.3/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.2.8/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.5/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.5/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.3.7/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.3/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.2/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.4/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.2.6/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.3.7/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.4/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.11/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.3.6/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.5/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.3.6/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.9/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.7/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.9/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.2.1/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.2.11/TLS10/learnedModel.dot
+ - ./TLS/mbedtls/1.3.8/TLS11/learnedModel.dot
+ - ./TLS/mbedtls/1.2.10/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.2.1/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.3.7/TLS12/learnedModel.dot
+ - ./TLS/mbedtls/1.3.6/TLS12/learnedModel.dot
+Specifications ./TLS/mbedtls/1.1.8/TLS11/learnedModel.dot:
+ - ./TLS/mbedtls/1.1.6/TLS11/learnedModel.dot
+ ...
 ```
 
 The following mandatory arguments should be provided:
